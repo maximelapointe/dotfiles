@@ -65,6 +65,12 @@ oh-my-zsh-install() {
     # chsh -s /bin/zsh. # Only works after relogging!
 }
 
+git-config() {
+    #TODO
+    #git config --global user.email "you@example.com"
+    #git config --global user.name "Your Name"
+}
+
 timezone() {
     echo "==========================================================="
     echo "             Change timezone                               "
@@ -79,4 +85,5 @@ zsh-themes
 oh-my-zsh-install
 import-dotfiles
 #edit-zshrc
+git-config
 timezone
