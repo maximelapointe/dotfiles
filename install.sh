@@ -71,6 +71,18 @@ git-config() {
     #git config --global user.name "Your Name"
 }
 
+neovim-install() {
+    curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+    chmod u+x nvim.appimage
+    ./nvim.appimage
+}
+
+installers() {
+    sudo yum install epel-release
+    sudo yum install snapd -y
+}
+
+
 timezone() {
     echo "==========================================================="
     echo "             Change timezone                               "
@@ -86,4 +98,6 @@ oh-my-zsh-install
 import-dotfiles
 #edit-zshrc
 git-config
+#installers
+neovim-install
 timezone
