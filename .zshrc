@@ -7,9 +7,15 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:"$HOME/.cargo/bin"
+export PATH=$PATH:"$HOME/.pulumi/bin"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+# Aliases
+alias k="kubectl"
+alias lah="ls -lah"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -117,3 +123,6 @@ LS_COLORS+=$_ls_colors
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Enable autocompletion
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
